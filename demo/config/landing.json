@@ -1,0 +1,168 @@
+{
+  "about": {
+    "who": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+    "what": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+    "why": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+    "since_when": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist."
+  },
+  "skills": [
+    {
+      "left": {
+        "label": "Photoshop & Illustrator",
+        "score": "75"
+      },
+      "right": {
+        "label": "WordPress",
+        "score": "85"
+      }
+    },
+    {
+      "left": {
+        "label": "Html & CSS",
+        "score": "95"
+      },
+      "right": {
+        "label": "Javascript",
+        "score": "70"
+      }
+    }
+  ],
+  "services": [
+    {
+      "title": "App Development",
+      "description": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+      "icon": "fa-mobile"
+    },
+    {
+      "title": "Ui Design",
+      "description": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+      "icon": "fa-bar-chart"
+    },
+    {
+      "title": "Cloud Hosting",
+      "description": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+      "icon": "fa-cloud"
+    },
+    {
+      "title": "Coding Pen",
+      "description": "Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.",
+      "icon": "fa-calculator"
+    }
+  ],
+  "team": [
+    {
+      "name": "Zaki Husein",
+      "sex": "male",
+      "image": "1.jpg"
+    },
+    {
+      "name": "SAZ Mansoor",
+      "sex": "male",
+      "image": "1.jpg"
+    },
+    {
+      "name": "Khadiza Dina",
+      "sex": "female",
+      "image": "1.jpg"
+    },
+    {
+      "name": "Musa Nasrullah",
+      "sex": "male",
+      "image": "1.jpg"
+    }
+  ],
+  "packages": [
+    {
+      "title": "Basic",
+      "price": "£49",
+      "icon": "fa-plug",
+      "featured": "",
+      "features": [
+        {
+          "title": "Personal Use"
+        },
+        {
+          "title": "3 projects"
+        },
+        {
+          "title": "1 GB Disk"
+        },
+        {
+          "title": "Custom Domain"
+        },
+        {
+          "title": "24/7 Support"
+        }
+      ]
+    },
+    {
+      "title": "Advanced",
+      "price": "£99",
+      "icon": "fa-cog",
+      "featured": "",
+      "features": [
+        {
+          "title": "Personal Use"
+        },
+        {
+          "title": "5 projects"
+        },
+        {
+          "title": "5 GB Disk"
+        },
+        {
+          "title": "Custom Domain"
+        },
+        {
+          "title": "24/7 Support"
+        }
+      ]
+    },
+    {
+      "title": "Professional",
+      "price": "£149",
+      "icon": "fa-star",
+      "featured": "price-box-featured",
+      "features": [
+        {
+          "title": "Personal Use"
+        },
+        {
+          "title": "20 projects"
+        },
+        {
+          "title": "20 GB Disk"
+        },
+        {
+          "title": "Custom Domain"
+        },
+        {
+          "title": "24/7 Support"
+        }
+      ]
+    },
+    {
+      "title": "Ultimate",
+      "price": "£199",
+      "icon": "fa-plus",
+      "featured": "",
+      "features": [
+        {
+          "title": "Multi Use"
+        },
+        {
+          "title": "Unlimited projects"
+        },
+        {
+          "title": "99 GB Disk"
+        },
+        {
+          "title": "Custom Domain"
+        },
+        {
+          "title": "24/7 Support"
+        }
+      ]
+    }
+  ]
+}

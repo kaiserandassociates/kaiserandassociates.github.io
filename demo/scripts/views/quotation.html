@@ -1,0 +1,117 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="close(false)" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                <h4 class="modal-title">
+                    Get a custom quote
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" data-toggle="validation" ng-submit="calculate()">
+                    <div class="form-group">
+                        <label class="form-control-static">Your business type</label>
+                        <select class="form-control" name="business" ng-model="business" id="business">
+                            <option value="sole-trader">Sole Trader</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="limited-company">Limited company</option>
+                        </select>
+                    </div>
+                    <div class="form-group" ng-show="business === 'limited-company'">
+                        <label class="form-control-static">Number of directors</label>
+                        <input ng-model="directors" name="directors" type="number" class="form-control" step="1"
+                               placeholder="Number of directors" min="1" ng-required="business === 'limited-company'">
+                    </div>
+                    <div class="form-group" ng-show="business === 'partnership'">
+                        <label class="form-control-static">Number of partners</label>
+                        <input ng-model="partners" name="partners" type="number" class="form-control" step="1"
+                               placeholder="Number of partners" min="2" ng-required="business === 'partnership'">
+
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox checkbox-default">
+                            <input type="checkbox" ng-model="payroll" id="payroll">
+                            <label for="payroll">
+                                Do you want us to manage your payroll?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="payroll">
+                        <label class="form-control-static">How often you want us to do your Payroll?</label>
+                        <select class="form-control" name="payroll_interval" ng-model="payroll_interval"
+                                id="payroll_interval">
+                            <option value="week">Every week</option>
+                            <option value="fortnight">Every fortnight</option>
+                            <option value="fourweeks">Every 4 weeks</option>
+                            <option value="month">Every month</option>
+                        </select>
+                    </div>
+                    <div class="form-group" ng-show="payroll">
+                        <label class="form-control-static">How many employees?</label>
+                        <input name="payroll_employees" ng-model="payroll_employees" type="number"
+                               class="form-control" step="1" min="1"
+                               placeholder="Number of employees" ng-required="payroll === true">
+
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox checkbox-default">
+                            <input type="checkbox" ng-model="vat" id="vat">
+                            <label for="vat">
+                                Do you want us to complete your VAT returns?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox checkbox-default">
+                            <input type="checkbox" ng-model="bookkeeping" id="bookkeeping">
+                            <label for="bookkeeping">
+                                Do you want us to complete your bookkeeping?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox checkbox-default">
+                            <input type="checkbox" ng-model="self_assessment" id="self_assessment">
+                            <label for="self_assessment">
+                                Do you want us to do your self assessment?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-show="self_assessment && business === 'limited-company'">
+                        <label class="form-control-static">Self assessment for how many directors?</label>
+                        <input name="self_assessment_directors" ng-model="self_assessment_directors" type="number"
+                               class="form-control" step="1"
+                               placeholder="Number of directors" min="1" max="{{directors}}"
+                               ng-required="self_assessment && business === 'limited-company'">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group" ng-show="self_assessment && business === 'partnership'">
+                        <label class="form-control-static">Self assessment for how many partners?</label>
+                        <input name="self_assessment_partners" ng-model="self_assessment_partners" type="number"
+                               class="form-control" step="1"
+                               placeholder="Number of partners" min="1" max="{{partners}}"
+                               ng-required="self_assessment && business === 'partnership'">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-static">Your turnover (£)</label>
+                        <input name="turnover" ng-model="turnover" type="number" class="form-control"
+                               placeholder="Your turnover" min="5000" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-default">Estimate</button>
+                        </div>
+                        <br/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h4>£{{estimate}}/month</h4>
+                <!--<button type="button" class="btn btn-primary" data-dismiss="modal">Estimate</button>-->
+            </div>
+        </div>
+    </div>
+</div>

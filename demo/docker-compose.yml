@@ -1,0 +1,14 @@
+build:
+  image: registry.iappdragon.com:5000/node:build
+  volumes:
+    - ./:/app/src
+  entrypoint: bower install --allow-root
+
+app:
+  image: registry.iappdragon.com:5000/nginx:latest
+  container_name: app01
+  restart: always
+  volumes:
+    - ./:/usr/share/nginx/html:ro
+  ports:
+    - "3000:80"
