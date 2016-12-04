@@ -12,7 +12,7 @@ angular.module('kaiserApp')
                 });
             });
         };
-        $http.get('/_data/landing.json').then(function(response) {
+        $http.get('/demo/_data/landing.json').then(function(response) {
             $scope.about = response.data.about;
             $scope.skills = response.data.skills;
             $scope.services = response.data.services;
